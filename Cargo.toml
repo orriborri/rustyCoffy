@@ -1,0 +1,51 @@
+[package]
+name = "coffee-brewing-tracker"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "server"
+path = "src/bin/server.rs"
+
+[[bin]]
+name = "app"
+path = "src/main.rs"
+
+[dependencies]
+dioxus = "0.7"
+dioxus-router = "0.7"
+diesel = { version = "2.1", features = ["postgres", "chrono", "r2d2"], optional = true }
+r2d2 = { version = "0.8", optional = true }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+chrono = { version = "0.4", features = ["serde"] }
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Backend dependencies
+axum = { version = "0.7", optional = true }
+tokio = { version = "1", features = ["full"], optional = true }
+tower-http = { version = "0.5", features = ["cors"], optional = true }
+
+[dev-dependencies]
+diesel_migrations = "2.1"
+proptest = "1.4"
+mockall = "0.12"
+
+[features]
+default = []
+database = ["diesel", "r2d2"]
+backend = ["database", "axum", "tokio", "tower-http"]
+postgres-tests = ["database"]
+
+[profile]
+
+[profile.wasm-dev]
+inherits = "dev"
+opt-level = 1
+
+[profile.server-dev]
+inherits = "dev"
+
+[profile.android-dev]
+inherits = "dev"

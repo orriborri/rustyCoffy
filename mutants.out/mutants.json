@@ -1,0 +1,932 @@
+[
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_coffee_beans",
+      "return_type": "-> Result<Vec<CoffeeBean>>",
+      "span": {
+        "start": {
+          "line": 49,
+          "column": 5
+        },
+        "end": {
+          "line": 58,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 51,
+        "column": 9
+      },
+      "end": {
+        "line": 57,
+        "column": 18
+      }
+    },
+    "replacement": "Ok(vec![Default::default()])",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_grinders",
+      "return_type": "-> Result<Vec<Grinder>>",
+      "span": {
+        "start": {
+          "line": 139,
+          "column": 5
+        },
+        "end": {
+          "line": 148,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 141,
+        "column": 9
+      },
+      "end": {
+        "line": 147,
+        "column": 21
+      }
+    },
+    "replacement": "Ok(vec![])",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::update_coffee_bean_quantity",
+      "return_type": "-> Result<()>",
+      "span": {
+        "start": {
+          "line": 85,
+          "column": 5
+        },
+        "end": {
+          "line": 109,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 94,
+        "column": 33
+      },
+      "end": {
+        "line": 94,
+        "column": 34
+      }
+    },
+    "replacement": ">",
+    "genre": "BinaryOperator"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_brewing_session_by_id",
+      "return_type": "-> Result<Option<BrewingSession>>",
+      "span": {
+        "start": {
+          "line": 290,
+          "column": 5
+        },
+        "end": {
+          "line": 300,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 292,
+        "column": 9
+      },
+      "end": {
+        "line": 299,
+        "column": 20
+      }
+    },
+    "replacement": "Ok(None)",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::update_coffee_bean_quantity",
+      "return_type": "-> Result<()>",
+      "span": {
+        "start": {
+          "line": 85,
+          "column": 5
+        },
+        "end": {
+          "line": 109,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 101,
+        "column": 49
+      },
+      "end": {
+        "line": 101,
+        "column": 50
+      }
+    },
+    "replacement": "+",
+    "genre": "BinaryOperator"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_brewing_sessions",
+      "return_type": "-> Result<Vec<BrewingSession>>",
+      "span": {
+        "start": {
+          "line": 239,
+          "column": 5
+        },
+        "end": {
+          "line": 288,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 241,
+        "column": 9
+      },
+      "end": {
+        "line": 287,
+        "column": 21
+      }
+    },
+    "replacement": "Ok(vec![Default::default()])",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::create_brewing_session",
+      "return_type": "-> Result<BrewingSession>",
+      "span": {
+        "start": {
+          "line": 202,
+          "column": 5
+        },
+        "end": {
+          "line": 237,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 216,
+        "column": 12
+      },
+      "end": {
+        "line": 216,
+        "column": 13
+      }
+    },
+    "replacement": "",
+    "genre": "UnaryOperator"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_active_coffee_beans",
+      "return_type": "-> Result<Vec<CoffeeBean>>",
+      "span": {
+        "start": {
+          "line": 60,
+          "column": 5
+        },
+        "end": {
+          "line": 71,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 62,
+        "column": 9
+      },
+      "end": {
+        "line": 70,
+        "column": 18
+      }
+    },
+    "replacement": "Ok(vec![Default::default()])",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::search_brewing_sessions",
+      "return_type": "-> Result<Vec<BrewingSession>>",
+      "span": {
+        "start": {
+          "line": 302,
+          "column": 5
+        },
+        "end": {
+          "line": 323,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 304,
+        "column": 9
+      },
+      "end": {
+        "line": 322,
+        "column": 21
+      }
+    },
+    "replacement": "Ok(vec![])",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::update_coffee_bean_quantity",
+      "return_type": "-> Result<()>",
+      "span": {
+        "start": {
+          "line": 85,
+          "column": 5
+        },
+        "end": {
+          "line": 109,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 87,
+        "column": 9
+      },
+      "end": {
+        "line": 108,
+        "column": 15
+      }
+    },
+    "replacement": "Ok(())",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_coffee_beans",
+      "return_type": "-> Result<Vec<CoffeeBean>>",
+      "span": {
+        "start": {
+          "line": 49,
+          "column": 5
+        },
+        "end": {
+          "line": 58,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 51,
+        "column": 9
+      },
+      "end": {
+        "line": 57,
+        "column": 18
+      }
+    },
+    "replacement": "Ok(vec![])",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::duplicate_brewing_session",
+      "return_type": "-> Result<BrewingSession>",
+      "span": {
+        "start": {
+          "line": 325,
+          "column": 5
+        },
+        "end": {
+          "line": 332,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 327,
+        "column": 9
+      },
+      "end": {
+        "line": 331,
+        "column": 49
+      }
+    },
+    "replacement": "Ok(Default::default())",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_brewing_session_by_id",
+      "return_type": "-> Result<Option<BrewingSession>>",
+      "span": {
+        "start": {
+          "line": 290,
+          "column": 5
+        },
+        "end": {
+          "line": 300,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 292,
+        "column": 9
+      },
+      "end": {
+        "line": 299,
+        "column": 20
+      }
+    },
+    "replacement": "Ok(Some(Default::default()))",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_grinders",
+      "return_type": "-> Result<Vec<Grinder>>",
+      "span": {
+        "start": {
+          "line": 139,
+          "column": 5
+        },
+        "end": {
+          "line": 148,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 141,
+        "column": 9
+      },
+      "end": {
+        "line": 147,
+        "column": 21
+      }
+    },
+    "replacement": "Ok(vec![Default::default()])",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_bean_usage_history",
+      "return_type": "-> Result<Vec<BrewingSession>>",
+      "span": {
+        "start": {
+          "line": 111,
+          "column": 5
+        },
+        "end": {
+          "line": 121,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 113,
+        "column": 9
+      },
+      "end": {
+        "line": 120,
+        "column": 21
+      }
+    },
+    "replacement": "Ok(vec![Default::default()])",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_connection",
+      "return_type": "-> Result<DbConnection>",
+      "span": {
+        "start": {
+          "line": 28,
+          "column": 5
+        },
+        "end": {
+          "line": 31,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 30,
+        "column": 9
+      },
+      "end": {
+        "line": 30,
+        "column": 52
+      }
+    },
+    "replacement": "Ok(Default::default())",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_brewing_sessions",
+      "return_type": "-> Result<Vec<BrewingSession>>",
+      "span": {
+        "start": {
+          "line": 239,
+          "column": 5
+        },
+        "end": {
+          "line": 288,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 241,
+        "column": 9
+      },
+      "end": {
+        "line": 287,
+        "column": 21
+      }
+    },
+    "replacement": "Ok(vec![])",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::update_coffee_bean_quantity",
+      "return_type": "-> Result<()>",
+      "span": {
+        "start": {
+          "line": 85,
+          "column": 5
+        },
+        "end": {
+          "line": 109,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 94,
+        "column": 33
+      },
+      "end": {
+        "line": 94,
+        "column": 34
+      }
+    },
+    "replacement": "==",
+    "genre": "BinaryOperator"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::create_coffee_bean",
+      "return_type": "-> Result<CoffeeBean>",
+      "span": {
+        "start": {
+          "line": 36,
+          "column": 5
+        },
+        "end": {
+          "line": 47,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 38,
+        "column": 9
+      },
+      "end": {
+        "line": 46,
+        "column": 17
+      }
+    },
+    "replacement": "Ok(Default::default())",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_coffee_bean_by_id",
+      "return_type": "-> Result<Option<CoffeeBean>>",
+      "span": {
+        "start": {
+          "line": 73,
+          "column": 5
+        },
+        "end": {
+          "line": 83,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 75,
+        "column": 9
+      },
+      "end": {
+        "line": 82,
+        "column": 17
+      }
+    },
+    "replacement": "Ok(Some(Default::default()))",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::update_coffee_bean_quantity",
+      "return_type": "-> Result<()>",
+      "span": {
+        "start": {
+          "line": 85,
+          "column": 5
+        },
+        "end": {
+          "line": 109,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 101,
+        "column": 49
+      },
+      "end": {
+        "line": 101,
+        "column": 50
+      }
+    },
+    "replacement": "/",
+    "genre": "BinaryOperator"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_coffee_bean_by_id",
+      "return_type": "-> Result<Option<CoffeeBean>>",
+      "span": {
+        "start": {
+          "line": 73,
+          "column": 5
+        },
+        "end": {
+          "line": 83,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 75,
+        "column": 9
+      },
+      "end": {
+        "line": 82,
+        "column": 17
+      }
+    },
+    "replacement": "Ok(None)",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_grinder_by_id",
+      "return_type": "-> Result<Option<Grinder>>",
+      "span": {
+        "start": {
+          "line": 150,
+          "column": 5
+        },
+        "end": {
+          "line": 160,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 152,
+        "column": 9
+      },
+      "end": {
+        "line": 159,
+        "column": 20
+      }
+    },
+    "replacement": "Ok(Some(Default::default()))",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_bean_usage_history",
+      "return_type": "-> Result<Vec<BrewingSession>>",
+      "span": {
+        "start": {
+          "line": 111,
+          "column": 5
+        },
+        "end": {
+          "line": 121,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 113,
+        "column": 9
+      },
+      "end": {
+        "line": 120,
+        "column": 21
+      }
+    },
+    "replacement": "Ok(vec![])",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_active_coffee_beans",
+      "return_type": "-> Result<Vec<CoffeeBean>>",
+      "span": {
+        "start": {
+          "line": 60,
+          "column": 5
+        },
+        "end": {
+          "line": 71,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 62,
+        "column": 9
+      },
+      "end": {
+        "line": 70,
+        "column": 18
+      }
+    },
+    "replacement": "Ok(vec![])",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::create_grinder",
+      "return_type": "-> Result<Grinder>",
+      "span": {
+        "start": {
+          "line": 126,
+          "column": 5
+        },
+        "end": {
+          "line": 137,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 128,
+        "column": 9
+      },
+      "end": {
+        "line": 136,
+        "column": 20
+      }
+    },
+    "replacement": "Ok(Default::default())",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_grinder_by_id",
+      "return_type": "-> Result<Option<Grinder>>",
+      "span": {
+        "start": {
+          "line": 150,
+          "column": 5
+        },
+        "end": {
+          "line": 160,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 152,
+        "column": 9
+      },
+      "end": {
+        "line": 159,
+        "column": 20
+      }
+    },
+    "replacement": "Ok(None)",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::update_coffee_bean_quantity",
+      "return_type": "-> Result<()>",
+      "span": {
+        "start": {
+          "line": 85,
+          "column": 5
+        },
+        "end": {
+          "line": 109,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 94,
+        "column": 33
+      },
+      "end": {
+        "line": 94,
+        "column": 34
+      }
+    },
+    "replacement": "<=",
+    "genre": "BinaryOperator"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::search_brewing_sessions",
+      "return_type": "-> Result<Vec<BrewingSession>>",
+      "span": {
+        "start": {
+          "line": 302,
+          "column": 5
+        },
+        "end": {
+          "line": 323,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 304,
+        "column": 9
+      },
+      "end": {
+        "line": 322,
+        "column": 21
+      }
+    },
+    "replacement": "Ok(vec![Default::default()])",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::get_grinder_usage_stats",
+      "return_type": "-> Result<GrinderStats>",
+      "span": {
+        "start": {
+          "line": 162,
+          "column": 5
+        },
+        "end": {
+          "line": 197,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 164,
+        "column": 9
+      },
+      "end": {
+        "line": 196,
+        "column": 11
+      }
+    },
+    "replacement": "Ok(Default::default())",
+    "genre": "FnValue"
+  },
+  {
+    "package": "coffee-brewing-tracker",
+    "file": "src/services/database.rs",
+    "function": {
+      "function_name": "Database::create_brewing_session",
+      "return_type": "-> Result<BrewingSession>",
+      "span": {
+        "start": {
+          "line": 202,
+          "column": 5
+        },
+        "end": {
+          "line": 237,
+          "column": 6
+        }
+      }
+    },
+    "span": {
+      "start": {
+        "line": 204,
+        "column": 9
+      },
+      "end": {
+        "line": 236,
+        "column": 20
+      }
+    },
+    "replacement": "Ok(Default::default())",
+    "genre": "FnValue"
+  }
+]

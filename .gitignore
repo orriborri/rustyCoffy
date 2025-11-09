@@ -1,0 +1,31 @@
+# Rust
+/target/
+Cargo.lock
+
+# Database
+.devbox/
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment
+.env.local
+.env.production
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logfile
+
+# Temporary files
+*.tmp
+*.temp

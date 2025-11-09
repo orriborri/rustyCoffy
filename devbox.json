@@ -1,0 +1,137 @@
+{
+  "packages": [
+    "postgresql@15",
+    "diesel-cli",
+    "pkg-config",
+    "openssl",
+    "dioxus-cli",
+    "webkitgtk_4_1",
+    "gtk3"
+  ],
+  "shell": {
+    "init_hook": [
+      "echo 'Setting up PostgreSQL development environment...'",
+      "export PGDATA=$PWD/.devbox/virtenv/postgresql/data",
+      "export PGSOCKETS=$PWD/.devbox/virtenv/postgresql/sockets",
+      "export PGHOST=$PGSOCKETS",
+      "export PGPORT=5433",
+      "export PGUSER=postgres",
+      "export PGDATABASE=coffee_tracker",
+      "export DATABASE_URL=postgresql://postgres@localhost:5433/coffee_tracker",
+      "mkdir -p $PGDATA",
+      "mkdir -p $PGSOCKETS",
+      "if [ ! -f $PGDATA/PG_VERSION ]; then",
+      "  echo 'Initializing PostgreSQL database...'",
+      "  initdb -D $PGDATA --auth-local=trust --auth-host=trust",
+      "fi"
+    ],
+    "scripts": {
+      "start-db": [
+        "echo 'Starting PostgreSQL...'",
+        "mkdir -p $PGSOCKETS",
+        "pg_ctl -D $PGDATA -l $PGDATA/logfile -o \"-k $PGSOCKETS -p 5433\" start",
+        "sleep 3",
+        "createdb coffee_tracker 2>/dev/null || echo 'Database coffee_tracker already exists'",
+        "createdb coffee_tracker_test 2>/dev/null || echo 'Database coffee_tracker_test already exists'",
+        "echo 'PostgreSQL is running on port 5433'",
+        "echo 'Databases: coffee_tracker (main), coffee_tracker_test (testing)'"
+      ],
+      "stop-db": [
+        "echo 'Stopping PostgreSQL...'",
+        "pg_ctl -D $PGDATA stop",
+        "echo 'PostgreSQL stopped'"
+      ],
+      "reset-db": [
+        "echo 'Resetting PostgreSQL database...'",
+        "pg_ctl -D $PGDATA stop 2>/dev/null || true",
+        "rm -rf $PGDATA",
+        "initdb -D $PGDATA --auth-local=trust --auth-host=trust",
+        "pg_ctl -D $PGDATA -l $PGDATA/logfile start",
+        "sleep 3",
+        "createdb coffee_tracker",
+        "createdb coffee_tracker_test",
+        "echo 'Database reset complete - both main and test databases created'"
+      ],
+      "setup-dev": [
+        "echo 'Setting up development environment...'",
+        "devbox run start-db",
+        "devbox run run-migrations",
+        "echo 'Development environment ready!'"
+      ],
+      "run-migrations": [
+        "echo 'Running database migrations...'",
+        "diesel migration run",
+        "echo 'Migrations applied successfully to coffee_tracker'"
+      ],
+      "verify-schema": [
+        "echo 'Verifying database schema...'",
+        "psql -d coffee_tracker -f verify_schema.sql"
+      ],
+      "test-constraints": [
+        "echo 'Testing database constraints...'",
+        "psql -d coffee_tracker -f test_constraints.sql"
+      ],
+      "test-core": [
+        "echo 'Running core tests (no database required)...'",
+        "cargo test --lib --no-default-features"
+      ],
+      "test-db": [
+        "echo 'Running database tests (requires PostgreSQL)...'",
+        "export TEST_DATABASE_URL=postgresql://postgres@localhost:5432/coffee_tracker_test",
+        "cargo test --lib --features postgres-tests"
+      ],
+      "test-all": [
+        "echo 'Running all tests...'",
+        "devbox run test-core",
+        "devbox run test-db"
+      ],
+      "build-core": [
+        "echo 'Building core library (no database)...'",
+        "cargo build --lib --no-default-features"
+      ],
+      "build-full": [
+        "echo 'Building full library with database features...'",
+        "cargo build --lib --features database"
+      ],
+      "serve": [
+        "echo 'Starting Coffee Brewing Tracker...'",
+        "echo 'Starting PostgreSQL...'",
+        "pg_ctl -D $PGDATA status || devbox run start-db",
+        "echo 'Starting backend API server on http://localhost:3000...'",
+        "cargo run --bin server --features backend &",
+        "sleep 3",
+        "echo 'Starting frontend on http://localhost:8080...'",
+        "dx serve --platform web"
+      ],
+      "dev-status": [
+        "echo '=== Coffee Brewing Tracker - Development Status ==='",
+        "echo 'PostgreSQL Status:'",
+        "pg_ctl -D $PGDATA status || echo 'PostgreSQL not running'",
+        "echo ''",
+        "echo 'Available databases:'",
+        "psql -l 2>/dev/null | grep coffee || echo 'No coffee databases found'",
+        "echo ''",
+        "echo 'Environment variables:'",
+        "echo \"DATABASE_URL: $DATABASE_URL\"",
+        "echo \"TEST_DATABASE_URL: $TEST_DATABASE_URL\"",
+        "echo ''",
+        "echo 'Available commands:'",
+        "echo '  devbox run start-db     - Start PostgreSQL'",
+        "echo '  devbox run stop-db      - Stop PostgreSQL'",
+        "echo '  devbox run setup-dev    - Full development setup'",
+        "echo '  devbox run test-core    - Run core tests (fast)'",
+        "echo '  devbox run test-db      - Run database tests'",
+        "echo '  devbox run test-all     - Run all tests'"
+      ]
+    }
+  },
+  "env": {
+    "DATABASE_URL": "postgresql://postgres@localhost:5433/coffee_tracker",
+    "TEST_DATABASE_URL": "postgresql://postgres@localhost:5433/coffee_tracker_test",
+    "PGDATA": "$PWD/.devbox/virtenv/postgresql/data",
+    "PGHOST": "localhost",
+    "PGPORT": "5433",
+    "PGUSER": "postgres",
+    "PGDATABASE": "coffee_tracker"
+  }
+}

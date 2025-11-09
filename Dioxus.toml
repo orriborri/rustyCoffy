@@ -1,0 +1,18 @@
+[application]
+name = "coffee-brewing-tracker"
+default_platform = "web"
+
+[web.app]
+title = "Coffee Brewing Tracker"
+
+[web.watcher]
+watch_path = ["src", "assets"]
+
+[web.resource]
+style = ["assets/style.css"]
+
+[web.resource.dev]
+style = ["assets/style.css"]
+
+[bundle]
+identifier = "com.rustycoffy.app"
